@@ -3,9 +3,12 @@ const config = require('./index');
 module.exports = {
   development: {
     storage: config.dbFile,
-    dialect: "sqlite",
+    dialect: "postgres",
     seederStorage: "sequelize",
     logQueryParameters: true,
-    typeValidation: true
+    typeValidation: true,
+    database: config.database,
+    username: config.username,
+    password: config.password,
   }
 };
